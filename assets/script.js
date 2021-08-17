@@ -248,3 +248,42 @@ var endGame = function() {
 
 
 
+document.querySelector(".question-container").addEventListener("click", function(event) {
+    if (event.target.classList.contains("choice")) {
+        var currentQuestion = questions[questionindex];
+        //check score
+        if (currentQuestion.answer === event.target.textContent) {
+            score++;
+        } else {
+            time -= 5;
+        }
+
+        //increase the q index
+        questionindex++;
+        //show next questions
+        if (questionindex == questions.length) {
+            endGame();
+        } else {
+            showQuestion();
+        }
+    }
+})
+
+document.querySelector("#start").addEventListener('click', function(event) {
+    //hide start elements
+    document.querySelector(".start-container").classList.add("hide");
+    //show questions elements
+    document.querySelector(".question-container").classList.remove("hide");
+    //start timer
+    timer = setInterval(function() {
+        time--
+        document.querySelector("#countdown").textContent = time;
+        if (time <= 0) {
+            endGame();
+        }
+    }, 1000);
+    //show question
+    showQuestion();
+});
+
+
