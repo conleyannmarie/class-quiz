@@ -117,3 +117,25 @@ var questions = [
 }
 ];
 
+var timer;
+var time = 75;
+var questionindex = 0;
+var score = 0;
+
+var showQuestion = function() {
+    var currentQuestion = questions[questionindex];
+
+    var template = `
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${currentQuestion.title}</h5>
+            <p class="card-text choice">${currentQuestion.choices[0]}</p>
+            <p class="card-text choice">${currentQuestion.choices[1]}</p>
+            <p class="card-text choice">${currentQuestion.choices[2]}</p>
+            <p class="card-text choice">${currentQuestion.choices[3]}</p>
+            </div>
+        </div>
+    `;
+
+    document.querySelector(".question-container").innerHTML = template;
+}
