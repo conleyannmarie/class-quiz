@@ -287,3 +287,24 @@ document.querySelector("#start").addEventListener('click', function(event) {
 });
 
 
+document.querySelector("#form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    //get the user input
+    var initials = document.querySelector("#initials").value;
+
+    //create newdata entry
+    var entry = {
+        init: initials,
+        score: score
+    }
+
+    //get old data
+    var data = JSON.parse(localStorage.getItem("data")) || [];
+
+    //new data in tot he old data
+    data.push(entry);
+
+    //set the data
+    localStorage.setItem("data",JSON.stringify(data));
+});
