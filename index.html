@@ -9,12 +9,38 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="welcome">Are you ready?</h1>
-      <input type="text" placeholder="Initials" id="initials" name="intitials" class="form-input" />
-        <label for="initials">Your Initials</label>
-      <button id="start">Start</button>
-      <h2 id="countdown"></h2>
-      <p id="main"></p>
+
+      <h2 id="countdown">75</h2>
+
+      <div class="start-container">
+        <h1 class="welcome">Quiz on Rocks</h1>
+        <p>
+          Take a timed quiz on rocks, try to finish before the timer runs out,
+          every wrong answer gets 10 seconds deducted from your time.
+        </p>
+        <h3>Are you ready</h3>
+        <button id="start">Start</button>
+      </div>
+
+      <div class="question-container hide">
+        <!-- questions go here -->
+      </div>
+
+      <div class="end-container hide">
+          <h2 class="score"></h2>
+          <form id="form">
+              <input
+                type="text"
+                placeholder="Initials"
+                id="initials"
+                name="intitials"
+                class="form-input"
+              />
+              <label for="initials">Your Initials</label>
+              <input type="submit" value="Submit"/>
+          </form>
+
+      </div>
     </div>
     <script src="./assets/script.js"></script>
   </body>
