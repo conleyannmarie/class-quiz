@@ -1,3 +1,25 @@
 .hide {
     display: none;
 }
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px 35px;
+      background-color: rgba(16, 49, 138, 0.623);
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: 80%;
+      z-index: 9999;
+}
+
+.card-text:hover {
+    background: rgba(83, 9, 50, 0.589);
+    color: black;
+    border-radius: 15px;
+    text-shadow: none;
+}
