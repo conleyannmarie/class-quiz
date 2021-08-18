@@ -6,5 +6,7 @@ End of game shows score and allows you to save our initials and score to local s
 
 Created from scratch (worked on with tutor) 
 
+![screenshot](assets/startpage.png)
+
 Used: Javascript, CSS, HTML
 
